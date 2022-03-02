@@ -1,11 +1,10 @@
 import React from 'react';
+import { BsTrash } from 'react-icons/bs';
 
 function TodoItem({ id, todo, onChecked }) {
     return (
-        <div onClick={() => {
-            onChecked(id)
-        }}>
-            <li>{todo}</li>
+        <div>
+            <li>{todo} <span className='trash' onClick={() => onChecked(id)}><BsTrash /></span></li>
         </div>
     )
 }
